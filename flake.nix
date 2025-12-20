@@ -22,10 +22,10 @@
         };
 
         # Add the desktop item to the pokerogue-app package
-        defaultPackage.${system} = self.packages.${system}.pokerogue-app;
+        defaultPackage = self.packages.${system}.pokerogue-app;
 
         # Add the desktop item as an app
-        apps.pokerogue.${system} = {
+        apps.pokerogue = {
           type = "app";
           program = "${self.packages.${system}.pokerogue-app}/bin/pokerogue";
         };
